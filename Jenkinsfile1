@@ -24,7 +24,7 @@ pipeline
         {
             steps
             {
-                sh 'sudo mv /home/ec2-user/workspace/sadam/server/target/server.jar /home/ec2-user/workspace/server.jar'
+                sh 'sudo mv /home/ec2-user/workspace/sadam/server/target/server.jar /home/ec2-user/workspace/sadam/server.jar'
                 sh 'sudo ls -l'
                 sh 'pwd'
                 sh 'sudo docker build -t saddamka:1.0 .'
