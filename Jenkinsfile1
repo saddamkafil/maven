@@ -24,7 +24,7 @@ pipeline
         {
             steps
             {
-                sh 'tomcat --version'
+                sh 'sudo tomcat --version'
             }
         }
 }
