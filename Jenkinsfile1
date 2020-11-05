@@ -20,11 +20,16 @@ pipeline
                 }
                 }
     }
-        stage("check tomcat")
+        stage("docker tomcat")
         {
             steps
             {
+                sh 'mv /home/ec2-user/workspace/sadam/server/target/server.jar /home/ec2-user/workspace/server.jar'
+                sh 'sudo docker build -t saddamka:1.0 .'
+                sh 'sudo docker run -it -d -p 8080:8080 --name tomcat saddamka:1.0 /bin/bash'
+                sh 'sudo docker exec -it tomcat /bin/bash'
                 sh 'sudo tomcat --version'
+                
             }
         }
 }
