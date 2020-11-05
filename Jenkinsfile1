@@ -27,7 +27,7 @@ pipeline
                 sh 'sudo mv /home/ec2-user/workspace/sadam/server/target/server.jar /home/ec2-user/workspace/sadam/server.jar'
                 sh 'sudo ls -l'
                 sh 'pwd'
-                sh 'sudo docker kill tomcat5'
+                sh 'sudo docker rm -f tomcat5'
                 sh 'sudo docker build -t saddamka:1.0 .'
                 sh 'sudo docker run -it -d -p 8085:8080 --name tomcat5 saddamka:1.0 /bin/bash'
                 sh 'sudo tomcat --version'
