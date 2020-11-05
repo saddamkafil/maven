@@ -1,0 +1,12 @@
+pipeline
+{
+    stages
+    {
+        stage('checkin fron git'){
+            steps
+            {
+                git 'https://github.com/saddamkafil/maven.git'
+            }
+        }
+    }
+}
