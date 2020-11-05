@@ -1,5 +1,8 @@
 pipeline
 {
+   agent {
+        label 'slave'
+        } 
     stages
     {
         stage('checkin fron git'){
