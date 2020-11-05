@@ -28,7 +28,7 @@ pipeline
                 sh 'sudo ls -l'
                 sh 'pwd'
                 sh 'sudo docker build -t saddamka:1.0 .'
-                sh 'sudo docker run -it -d -p 8080:8080 --name tomcat saddamka:1.0 /bin/bash'
+                sh 'sudo docker run -it -d -p 8080:8080 --name tomcat5 saddamka:1.0 /bin/bash'
                 sh 'sudo tomcat --version'
                 
             }
