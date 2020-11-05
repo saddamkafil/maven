@@ -20,5 +20,12 @@ pipeline
                 }
                 }
     }
+        stage("check tomcat")
+        {
+            steps
+            {
+                sh 'tomcat --version'
+            }
+        }
 }
 }
