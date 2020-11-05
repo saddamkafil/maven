@@ -30,7 +30,8 @@ pipeline
                 sh 'sudo docker rm -f tomcat5'
                 sh 'sudo docker build -t saddamka:1.0 .'
                 sh 'sudo docker run -it -d -p 8085:8080 --name tomcat5 saddamka:1.0 /bin/bash'
-                sh 'sudo exec -t tomcat5 /bin/bash .'
+                sh 'sudo docker exec -t tomcat5 /bin/bash .'
+                sh 'hostname'
             }
         }
 }
