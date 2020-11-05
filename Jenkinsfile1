@@ -5,7 +5,7 @@ pipeline
         stage('checkin fron git'){
             steps
             {
-                git 'https://github.com/saddamkafil/maven.git'
+                git branch: 'testbranch', url: 'https://github.com/saddamkafil/maven.git'
             }
         }
     }
